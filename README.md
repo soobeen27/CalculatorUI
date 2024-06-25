@@ -1,4 +1,5 @@
 # Calculator app
-<img src="https://github.com/soobeen27/CalculatorUI/assets/68931740/f6339953-50f1-4db6-b163-cb82588c8454" width = "30%">
+<img src="https://github.com/soobeen27/CalculatorUI/assets/68931740/65e34037-e6c5-441d-9c5a-073573695121" width = "30%">
+
 
 required: SwiftLint 
