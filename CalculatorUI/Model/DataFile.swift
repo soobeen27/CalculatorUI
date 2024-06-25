@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Buttons {   
+struct Buttons {
     private init() {}
-    static let texts = ["7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "*", "AC", "0", "=", "/"]
-    static let orrangeBtns = ["+", "-", "/", "*", "AC", "="]
-    static let operators = ["+", "-", "/", "*"]
+    static let multiplMark = "✕"
+    static let divisionMark = "÷"
+    static let texts = ["7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", multiplMark, "AC", "0", "=", divisionMark]
+    static let orrangeBtns = ["+", "-", divisionMark, multiplMark, "AC", "="]
+    static let operators = ["+", "-", divisionMark, multiplMark]
 }
-

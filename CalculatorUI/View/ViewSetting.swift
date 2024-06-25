@@ -11,6 +11,11 @@ import SnapKit
 class ViewSetting: UIView {
     var expression = "0" {
         didSet {
+            Buttons.operators.forEach {
+                if expression == $0 {
+                    expression = "0"
+                }
+            }
             numLabel.text = expression
         }
     }

@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         case "AC":
             viewSetting.expression = "0"
         case "=":
-            guard let result = calculate(expression: viewSetting.expression) else { return }
+            let calcExp = viewSetting.expression.replacingOccurrences(of: Buttons.multiplMark, with: "*").replacingOccurrences(of: Buttons.divisionMark, with: "/")
+            guard let result = calculate(expression: calcExp) else { return }
             viewSetting.expression = String(result)
             print(viewSetting.expression)
         case _ where Buttons.operators.contains(input):
