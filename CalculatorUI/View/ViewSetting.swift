@@ -4,7 +4,6 @@
 //
 //  Created by Soo Jang on 6/24/24.
 //
-
 import UIKit
 import SnapKit
 
@@ -47,9 +46,8 @@ class ViewSetting: UIView {
     }()
     lazy var horizonSt: [UIStackView] = {
         var stArray: [UIStackView] = []
-        for i in 0...3 {
-            let index = i * 4
-            let stv = UIStackView(arrangedSubviews: [buttons[index], buttons[index + 1], buttons[index + 2], buttons[index + 3]])
+        for index in stride(from: 0, through: buttons.endIndex, by: 4) {
+            let stv = UIStackView(arrangedSubviews: Array(buttons[index...(index + 3)]))
             stv.axis = .horizontal
             stv.spacing = 10
             stv.distribution = .fillEqually

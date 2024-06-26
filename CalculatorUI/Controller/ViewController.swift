@@ -13,7 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         viewSetting.buttons.forEach {
             $0.addTarget(self, action: #selector(btnsTapped), for: .touchDown)
         }
