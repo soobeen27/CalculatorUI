@@ -38,7 +38,7 @@ class ViewSetting: UIView {
             btn.backgroundColor = UIColor(red: 58/255, green: 58/255, blue: 58/255, alpha: 1.0)
             Buttons.orrangeBtns.forEach {
                 if btn.titleLabel?.text == $0 {
-                    btn.backgroundColor = .orange
+                    btn.backgroundColor = .systemOrange
                 }
             }
             return btn
@@ -46,7 +46,7 @@ class ViewSetting: UIView {
     }()
     lazy var horizonSt: [UIStackView] = {
         var stArray: [UIStackView] = []
-        for index in stride(from: 0, through: buttons.endIndex, by: 4) {
+        for index in stride(from: 0, to: buttons.endIndex, by: 4) {
             let stv = UIStackView(arrangedSubviews: Array(buttons[index...(index + 3)]))
             stv.axis = .horizontal
             stv.spacing = 10
@@ -80,15 +80,20 @@ class ViewSetting: UIView {
             $0.top.equalToSuperview().inset(200)
             $0.height.equalTo(100)
         }
-        buttons.forEach {
-            $0.snp.makeConstraints {
+        buttons.forEach { btn in
+            btn.snp.makeConstraints {
                 $0.size.equalTo(80)
             }
-            $0.layer.cornerRadius = 40
+            btn.layer.cornerRadius = 40
         }
         vertiSt.snp.makeConstraints {
             $0.top.equalTo(numLabel.snp.bottom).offset(60)
             $0.centerX.equalToSuperview()
         }
     }
+}
+
+#Preview {
+    let name = ViewController()
+    return name
 }
